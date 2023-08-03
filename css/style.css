@@ -249,11 +249,40 @@ footer {
 
 }
 
+.comprar-conteiner{
+    display: flex;
+    justify-content: right;
+    padding-top: 1rem;
+}
+
 #comprar {
     border: 1px solid #0A4D68;
     border-radius: 10px;
     background-color: #0A4D68;
     color: #fff;
     padding: 0.3rem 1rem;
+}
+
+.conteiner-cupon{
+    display: flex;
+    justify-content: center;
+    gap: 0.5rem;
+}
+
+#cupon{
+    border: none;
+    border-radius: 5px;
+}
+
+#aplicar-cupon{
+    border: none;
+    border-radius: 5px;
+    background-color: #3894a3;
+}
+
+.title-cupon{
+    display: flex;
+    justify-content: center;
+    color: #000;
 }
 

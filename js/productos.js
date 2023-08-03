@@ -8,6 +8,5 @@ class Producto {
         this.descripcion = descripcion
         this.precio = precio
         this.cantidad = cantidad
-        this.descuento = descuento
     }
 }

@@ -82,42 +82,46 @@ function carritoModal() {
 
     }
 
+
     // TOTAL
 
     const total = carrito.reduce((acumulador, el) => acumulador + el.precio * el.cantidad, 0)
-    
+
 
     // FOOTER-CARRITO
 
     const totalCarrito = document.createElement('div')
     totalCarrito.className = ('total-carrito')
     totalCarrito.innerHTML = `
-    <p class = "total-titulo"> Precio Total: $ ${total} </p>
-    <div class="descuento-producto"> 
-      <input type="text" id="cupon">
-      <button id="aplicar-cupon"> Aplicar Descuento </button>
-      <p>El cupon de descuento del 10% es: JAVASCRIPT</p>
-      <p> Total con Descuento: $ ${totalDescuento}</p>
+    <p class = "total-titulo"> Precio Total: $ <span id="precio-Total"> ${total} </span> </p>
+    <div class="descuento-conteiner"> 
+      <div class="conteiner-cupon">
+        <input type="text" id="cupon">
+        <button id="aplicar-cupon"> Aplicar Descuento </button>
+      </div>
+      <p class="title-cupon">El cupon de descuento del 10% es: JAVASCRIPT</p>
     </div>
-    <div class="comprar"> 
+    <div class="comprar-conteiner"> 
       <button id="comprar">Comprar</button>
     </div>
     `
     conteinerCarrito.append(totalCarrito);
 
-    // DESCUENTO
+    // CUPON DE DESCUENTO
 
-    const descuento = document.getElementById('aplicar-cupon')
-    const cupon = document.getElementById('cupon')
+    const btnDescuento = document.getElementById('aplicar-cupon')
+    const inputCupon = document.getElementById('cupon')
 
-    descuento.onclick = ()=>{
-        // aca tendria que ir un if?
-        // si descuento === 'javascript = total con descuento
-        // else = total
+    btnDescuento.onclick = () => {
+        if (inputCupon.value === 'JAVASCRIPT') {
+            const descuento = total * 0.1
+            const totalConDescuento = total - descuento
+            const precioTotalElement = document.getElementById('precio-Total')
+            precioTotalElement.textContent = totalConDescuento.toFixed(2)
+        }
     }
-    
 
-    //sweetAlert
+    //SWEET ALERT
 
     let comprar = totalCarrito.querySelector('#comprar')
     comprar.onclick = () => {
@@ -130,7 +134,8 @@ function carritoModal() {
 }
 
 
-// Eliminar el producto por ID
+// ELIMINAR PRODUCTOS POR ID
+
 const eliminarProductos = (id) => {
     const encontrarId = carrito.find((el) => el.id === id);
 

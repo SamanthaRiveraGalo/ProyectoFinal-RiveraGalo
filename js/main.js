@@ -56,10 +56,11 @@ const baseDeDatos = async () => {
                         nombre: product.nombre,
                         precio: product.precio,
                         cantidad: product.cantidad,
-                        descuento: product.descuento
                     })
                     localStorage.setItem('menu', JSON.stringify(carrito))  // guardo lo que modifico
                 }
+
+                carritoModal()
             })
         }
         agregarCarrito()
