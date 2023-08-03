@@ -1,0 +1,50 @@
+[
+    {
+        "id": 1,
+        "img": "menu1.png",
+        "nombre": "Veggie Omelette",
+        "descripcion": "PASTURE-RAISED WHOLE EGGS, SCALLIONS, BELL PEPPER, MOZZARELLA, AND SPINACH, SERVED WITH AVOCADO SMASH, TOASTED SOURDOUGH, ARUGUL",
+        "cantidad": 1,
+        "precio": 16
+    },
+    {
+        "id": 2,
+        "img": "menu2.png",
+        "nombre": "Avocado Smash",
+        "descripcion": "TOASTED SOURDOUGH, TOPPED WITH AVOCADO, CUCUMBER, RADISH, MICRO CILANTRO, OLIVE OIL DRIZZLE",
+        "cantidad": 1,
+        "precio": 11
+    },
+    {
+        "id": 3,
+        "img": "menu3.png",
+        "nombre": "Perfect Egg Sandwich",
+        "descripcion": "ARTISANAL TOASTED BAGEL SCOOPED OUT OR CIABATTA, PASTURE-RAISED SOFT BOILED EGGS, MOZZARELLA, ARUGULA, AVOCADO SMASH, TOMATO, RED PEPPER FLAKES",
+        "cantidad": 1,
+        "precio": 14
+    },
+    {
+        "id": 4,
+        "img": "menu7.png",
+        "nombre": "The New Yoker",
+        "descripcion": "TOASTED SOURDOUGH, WHIPPED CREAM CHEESE WITH SCALLION AND SPICED ZAATAR, SMOKED SALMON, SLICED TOMATO, PICKLED RED ONION, ALFALFA SPROUTS, LEMON OIL DRIZZLE",
+        "cantidad": 1,
+        "precio": 16
+    },
+    {
+        "id": 5,
+        "img": "menu5.png",
+        "nombre": "Croissant Sandwitch",
+        "descripcion": "PASTURE-RAISED EGGS & MOZZARELLA OMELETTE SERVED ON PLAIN CROISSANT WITH TOMATO, MIXED GREENS AND SPICY AIOLI SIDEA",
+        "cantidad": 1,
+        "precio": 15
+    },
+    {
+        "id": 6,
+        "img": "menu6.png",
+        "nombre": "Turkey Egg Wrap",
+        "descripcion": "SOFT BOILED PASTURE-RAISED EGGS, TURKEY BACON, SWEET POTATO, AVOCADO, MOZZARELLA, SPINACH, OLIVE OIL, SALSA PICANTE ON THE SIDE",
+        "cantidad": 1,
+        "precio": 19
+    }
+]
