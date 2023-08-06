@@ -33,6 +33,22 @@ nav .container-fluid .collapse .shoppingcar a {
     }
 }
 
+/*main*/
+
+.nuestros-productos {
+    font-size: 25px;
+    display: flex;
+    justify-content: center;
+    padding: 2rem 0 1rem 0;
+}
+
+.span-nuestros-productos {
+    background-color: #3894a3;
+    color: #fff;
+    padding: 1.5rem;
+    border-radius: 10px;
+}
+
 /*footer*/
 
 .fa-instagram {
@@ -145,23 +161,8 @@ footer {
 }
 
 /*carrito*/
-
-#conteiner-carrito {
+#offcanvasRight {
     width: 35%;
-    color: #fff;
-    background-color: #B9EDDD;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    position: fixed;
-    overflow: auto;
-    z-index: 1;
-    top: 0;
-    right: 0;
-    scrollbar-color: none;
-    padding: 1rem;
-    transform: translateX(0);
-    transition: all .3s ease-in-out;
 }
 
 .encabezado {
@@ -249,7 +250,7 @@ footer {
 
 }
 
-.comprar-conteiner{
+.comprar-conteiner {
     display: flex;
     justify-content: right;
     padding-top: 1rem;
@@ -263,26 +264,159 @@ footer {
     padding: 0.3rem 1rem;
 }
 
-.conteiner-cupon{
+.conteiner-cupon {
     display: flex;
     justify-content: center;
     gap: 0.5rem;
 }
 
-#cupon{
-    border: none;
+#cupon {
     border-radius: 5px;
 }
 
-#aplicar-cupon{
+#aplicar-cupon {
     border: none;
     border-radius: 5px;
-    background-color: #3894a3;
+    background-color: #0A4D68;
+    color: #fff;
 }
 
-.title-cupon{
+.title-cupon {
     display: flex;
     justify-content: center;
     color: #000;
 }
 
+/*FORMULARIO*/
+#titulo-datos {
+    display: flex;
+    justify-content: center;
+    padding: 2.5rem 0;
+}
+.titulo-personal{
+    font-size: 30px;
+    background-color: #0A4D68;
+    color: #fff;
+    padding: 0.5rem 1rem;
+    border-radius: 10px;
+}
+
+#formulario {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    margin: 0 10rem;
+    row-gap: 2.5rem;
+    justify-content: center;
+}
+
+.dato-nombre {
+    grid-area: 1 / 1 / 2 / 2;
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    align-items: center;
+}
+
+.dato-apellido {
+    grid-area: 1 / 2 / 2 / 3;
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    align-items: center;
+}
+
+.dato-email {
+    grid-area: 2 / 1 / 3 / 2;
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    align-items: center;
+}
+
+.dato-fecha {
+    grid-area: 2 / 2 / 3 / 3;
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    align-items: center;
+}
+
+.dato-pago {
+    display: flex;
+    justify-content: center;
+    padding: 2.5rem 0;
+}
+
+.titulo-pago{
+    font-size: 30px;
+    background-color: #0A4D68;
+    color: #fff;
+    padding: 0.5rem 1rem;
+    border-radius: 10px;
+}
+
+.formulario-tarjeta {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    margin: 0 10rem;
+    row-gap: 2.5rem;
+    padding-bottom: 3rem;
+}
+
+.numero-tarjeta {
+    grid-area: 1 / 1 / 2 / 2;
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    align-items: center;
+}
+
+.nombre-tarjeta {
+    grid-area: 1 / 2 / 2 / 3;
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    align-items: center;
+}
+
+.vencimiento {
+    grid-area: 2 / 1 / 3 / 2;
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    align-items: center;
+}
+
+.tarjeta-ccv {
+    grid-area: 2 / 2 / 3 / 3;
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    align-items: center;
+}
+
+.vencimiento {
+    display: flex;
+}
+
+.btn-compra{
+    display: flex;
+    justify-content: center;
+    padding: 2rem 0;
+}
+
+.btn-comprar{
+    background-color: #3894a3;
+    color: #fff;
+    border: none;
+    padding: 0.5rem 1rem;
+    border-radius: 10px;
+    cursor: pointer;
+    font-size: 18px;
+}
+
+.btn-comprar:hover{
+    background-color: #0A4D68;
+}

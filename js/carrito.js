@@ -17,11 +17,11 @@ function carritoModal() {
     //Encabezado
 
     const modalEncabezado = document.createElement('div')
-    modalEncabezado.className = ('encabezado')
+    modalEncabezado.className = ('offcanvas-header encabezado')
     modalEncabezado.innerHTML = `
-    <h1 class="encabezado-titulo"> Carrito </h1>
-    <img class="carrito-logo" src="./assets/logo.png">
-    <p class = "cierre-boton" > x </i> </p>
+      <h5 class="offcanvas-title encabezado-titulo" id="offcanvasRightLabel">Carrito</h5>
+      <img class="carrito-logo" src="./assets/logo.png">
+      <button type="button" class="btn-close cierre-boton" data-bs-dismiss="offcanvas" aria-label="Close"></button>
     `
     conteinerCarrito.append(modalEncabezado)
 
@@ -49,7 +49,7 @@ function carritoModal() {
              <span class="sumar-cantidad"> + </span>
            </div>
            <p> Total: $ ${product.cantidad * product.precio} </p>
-           <span class="boton-eliminar"> Eliminar </span>
+           <p class="boton-eliminar"> Eliminar </p>
 
      `
         conteinerCarrito.append(carritoProductos);
@@ -102,7 +102,7 @@ function carritoModal() {
       <p class="title-cupon">El cupon de descuento del 10% es: JAVASCRIPT</p>
     </div>
     <div class="comprar-conteiner"> 
-      <button id="comprar">Comprar</button>
+      <a href="pages/compra.html"><button id="comprar">Iniciar Compra</button></a>
     </div>
     `
     conteinerCarrito.append(totalCarrito);
@@ -129,16 +129,15 @@ function carritoModal() {
             text: 'Su compra fue exitosa',
             icon: 'success',
         });
-
         // que se limpie el carrito entero
         conteinerCarrito.innerHTML = '';
         // vaciar el arrey carrito
         carrito = []
         // y guardar tamb los cambios en el storage es decir que se reinicie
         localStorage.removeItem('menu')
+        carritoModal()
     }
 }
-
 
 // ELIMINAR PRODUCTOS
 
