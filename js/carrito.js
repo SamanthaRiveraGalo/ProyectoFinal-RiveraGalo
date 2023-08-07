@@ -82,7 +82,6 @@ function carritoModal() {
 
     }
 
-
     // TOTAL
 
     const total = carrito.reduce((acumulador, el) => acumulador + el.precio * el.cantidad, 0)
@@ -102,7 +101,7 @@ function carritoModal() {
       <p class="title-cupon">El cupon de descuento del 10% es: JAVASCRIPT</p>
     </div>
     <div class="comprar-conteiner"> 
-      <a href="pages/compra.html"><button id="comprar">Iniciar Compra</button></a>
+      <a href="pages/formulario.html"><button id="comprar">Iniciar Compra</button></a>
     </div>
     `
     conteinerCarrito.append(totalCarrito);
@@ -121,20 +120,17 @@ function carritoModal() {
         }
     }
 
-    //SWEET ALERT
+    // CLICK EN INICIAR COMPRA
 
     let comprar = totalCarrito.querySelector('#comprar')
     comprar.onclick = () => {
-        swal({
-            text: 'Su compra fue exitosa',
-            icon: 'success',
-        });
         // que se limpie el carrito entero
         conteinerCarrito.innerHTML = '';
         // vaciar el arrey carrito
         carrito = []
         // y guardar tamb los cambios en el storage es decir que se reinicie
         localStorage.removeItem('menu')
+        // que se pinte de nuevo el html
         carritoModal()
     }
 }
@@ -149,4 +145,4 @@ const eliminarProductos = (id) => {
         localStorage.setItem('menu', JSON.stringify(carrito));
         carritoModal();
     }
-};
+}

@@ -420,3 +420,9 @@ footer {
 .btn-comprar:hover{
     background-color: #0A4D68;
 }
+
+/*SPINNER*/
+
+.spinner-border{
+   padding: 6rem;
+}

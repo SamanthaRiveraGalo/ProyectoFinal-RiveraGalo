@@ -4,9 +4,8 @@ const datosPersonales = document.getElementById('datos-personales')
 //ARRAY
 compra = []
 
-//LOADING
-
 //GENERAR FORMULARIO
+
 const generarFormulario = document.createElement('div')
 generarFormulario.className = 'formulario-datos'
 generarFormulario.innerHTML = `
@@ -44,15 +43,8 @@ generarFormulario.innerHTML = `
   </div>
   <div class="fecha-tarjeta">
     <div class="vencimiento"> Vencimiento
-            <div class="grupo-select">
-                <select name="mes" id="selectMes">
-                    <option disabled selected>Mes</option>
-                </select>        
-            </div>
-            <div class="grupo-select">
-                <select name="year" id="selectYear">
-                    <option disabled selected>Año</option>
-                </select>
+            <div>
+                  <input id="tarjeta-vencimiento" type="month" value="2023-11" min="2024-02" max="2030-12">    
             </div>
     </div>
   </div>
@@ -62,7 +54,7 @@ generarFormulario.innerHTML = `
    </div> 
 </form>
 <div class="btn-compra">
-   <button type="submit" id="btn-comprar" class="btn-comprar">Finalizar Comprar</button>
+  <button type="submit" id="btn-comprar" class="btn-comprar">Finalizar Comprar</button>
 </div>
 `
 datosPersonales.append(generarFormulario)
@@ -70,37 +62,55 @@ datosPersonales.append(generarFormulario)
 //LOCALSTORAGE
 //Si el LocalStorage tiene datos, los agrego al Array compra
 if (localStorage.getItem('compras')) {
-    let guardarCompra = JSON.parse(localStorage.getItem('compras'));
+  let guardarCompra = JSON.parse(localStorage.getItem('compras'));
 
-    for (let i = 0; i < compra.length; i++) {
-        guardarCompra.push(compra[i]);
-    }
+  for (let i = 0; i < compra.length; i++) {
+    guardarCompra.push(compra[i]);
+  }
 }
 
 // FUNCION AGREGAR DATOS
 
 function agregarCompra() {
-    const inputNombre = document.getElementById('input-nombre').value
-    const inputApellido = document.getElementById('input-apellido').value
-    const inputEmail = document.getElementById('input-email').value
-    const inputNacimiento = document.getElementById('input-fecha').value
-    const inputNombreTarjeta = document.getElementById('input-nombre-tarjeta').value
-    const inputNumeroTarjeta = document.getElementById('input-numero-tarjeta').value
-    const inputCcv = document.getElementById('input-CCV').value
+  const inputNombre = document.getElementById('input-nombre').value
+  const inputApellido = document.getElementById('input-apellido').value
+  const inputEmail = document.getElementById('input-email').value
+  const inputNacimiento = document.getElementById('input-fecha').value
+  const inputNumeroTarjeta = document.getElementById('input-numero-tarjeta').value
+  const inputNombreTarjeta = document.getElementById('input-nombre-tarjeta').value
+  const inputVencimiento = document.getElementById('tarjeta-vencimiento').value
+  const inputCcv = document.getElementById('input-CCV').value
 
-    const nuevaCompra = new Formulario(inputNombre, inputApellido, inputEmail, inputNacimiento, inputNombreTarjeta, inputNumeroTarjeta, inputCcv)
-    compra.push(nuevaCompra)
+  const nuevaCompra = new Formulario(inputNombre, inputApellido, inputEmail, inputNacimiento, inputNumeroTarjeta, inputNombreTarjeta, inputVencimiento, inputCcv)
+  compra.push(nuevaCompra)
 
-    // GUARDO EN LOCALSTORAGE
-    localStorage.setItem('compras', JSON.stringify(compra))
+  // GUARDO EN LOCALSTORAGE
+  localStorage.setItem('compras', JSON.stringify(compra))
 }
 
+// FINALIZAR COMPRA - click
 let btnComprar = document.getElementById('btn-comprar')
-btnComprar.addEventListener ('click', (e)=>{
-    // LIMPIAR TODOS LOS INPUT
-    e.preventDefault();
-    agregarCompra();
+btnComprar.addEventListener('click', (e) => {
+  // evitar que se recargue
+  e.preventDefault();
+  // se guarden los productos
+  agregarCompra();
+  //se limpien los input
+  limpiarFormulario()
+  // mensaje de compra exitosa
+  swal({
+    title: "Su Compra fue Exitosa",
+    text: "Muchas gracias!",
+    icon: "success",
+  });
 })
+
+function limpiarFormulario() {
+  let formularioDatosPersonales = document.getElementById('formulario').reset()
+  let formularioTarjeta = document.getElementById('formulario-tarjeta').reset()
+}
+
+//validacion de datos
 
 
 
