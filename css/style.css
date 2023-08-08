@@ -426,3 +426,11 @@ footer {
 .spinner-border{
    padding: 6rem;
 }
+
+/*carrito cantidad*/
+.conteiner-carrito{
+    display: flex;
+}
+.carrito-numero{
+    color: #0A4D68;
+}

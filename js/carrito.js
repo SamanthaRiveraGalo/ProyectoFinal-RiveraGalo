@@ -144,5 +144,12 @@ const eliminarProductos = (id) => {
         carrito.splice(index, 1);
         localStorage.setItem('menu', JSON.stringify(carrito));
         carritoModal();
+        carritoCantidad()
     }
+}
+
+// CARRITO NUMERO
+
+const carritoCantidad = () => {
+    numeroCarrito.innerText = carrito.length
 }

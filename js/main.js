@@ -1,6 +1,7 @@
 const contenedorTarjetas = document.getElementById('productos-conteiner')
 const verCarrito = document.getElementById('shopping')
 const conteinerCarrito = document.getElementById('conteiner-carrito')
+const numeroCarrito = document.getElementById('carrito-numero')
 
 
 let carrito = JSON.parse(localStorage.getItem('menu')) || [];
@@ -63,6 +64,7 @@ const baseDeDatos = async () => {
                         })
                         localStorage.setItem('menu', JSON.stringify(carrito))  // guardo lo que modifico
                     }
+                    carritoCantidad()
                 })
             }
             agregarCarrito()
