@@ -69,7 +69,6 @@ if (localStorage.getItem('compras')) {
   }
 }
 
-
 // FUNCION AGREGAR DATOS
 
 function agregarCompra() {
@@ -88,7 +87,6 @@ function agregarCompra() {
 
   // GUARDO EN LOCALSTORAGE
   localStorage.setItem('compras', JSON.stringify(compra))
-
 }
 
 // FINALIZAR COMPRA - click

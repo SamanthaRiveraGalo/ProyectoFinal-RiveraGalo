@@ -95,13 +95,13 @@ function carritoModal() {
     <p class = "total-titulo"> Precio Total: $ <span id="precio-Total"> ${total} </span> </p>
     <div class="descuento-conteiner"> 
       <div class="conteiner-cupon">
-        <input type="text" id="cupon">
-        <button id="aplicar-cupon"> Aplicar Descuento </button>
+        <input type="text" id="cupon" class="cupon">
+        <button id="aplicar-cupon" class="aplicar-cupon"> Aplicar Descuento </button>
       </div>
       <p class="title-cupon">El cupon de descuento del 10% es: JAVASCRIPT</p>
     </div>
     <div class="comprar-conteiner"> 
-      <a href="pages/formulario.html"><button id="comprar">Iniciar Compra</button></a>
+      <a href="pages/formulario.html"><button id="comprar" class="comprar">Iniciar Compra</button></a>
     </div>
     `
     conteinerCarrito.append(totalCarrito);
@@ -139,7 +139,7 @@ function carritoModal() {
 
 const eliminarProductos = (id) => {
     const index = carrito.findIndex((el) => el.id === id);
-
+    
     if (index !== -1) {
         carrito.splice(index, 1);
         localStorage.setItem('menu', JSON.stringify(carrito));
@@ -151,5 +151,10 @@ const eliminarProductos = (id) => {
 // CARRITO NUMERO
 
 const carritoCantidad = () => {
-    numeroCarrito.innerText = carrito.length
+    numeroCarrito.style.display= "block"
+    // lo guardo en el local
+    const carritoContador = carrito.length
+    localStorage.setItem ('carritoContador', JSON.stringify(carritoContador))
+    numeroCarrito.innerText = JSON.parse(localStorage.getItem('carritoContador'))
 }
+carritoCantidad()

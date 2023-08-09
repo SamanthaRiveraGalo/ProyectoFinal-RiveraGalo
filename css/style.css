@@ -2,17 +2,25 @@ body {
     margin: 0;
     padding: 0;
     text-decoration: none;
-    background-color: #E1FFEE;
+}
 
+.navbar-nav .nav-item a {
+    font-size: 18px;
+}
+
+.navbar-nav .nav-item a:hover {
+    background-color: #3894a3;
+    color: #fff;
+    border-radius: 5px;
+}
+
+#logo {
+    width: 6rem;
 }
 
 nav .container-fluid .collapse .shoppingcar a {
     text-decoration: none;
     color: black;
-}
-
-#logo {
-    width: 6rem;
 }
 
 .fa-cart-shopping {
@@ -34,6 +42,9 @@ nav .container-fluid .collapse .shoppingcar a {
 }
 
 /*main*/
+.conteiner-main {
+    background-color: #F7F5EB;
+}
 
 .nuestros-productos {
     font-size: 25px;
@@ -47,6 +58,7 @@ nav .container-fluid .collapse .shoppingcar a {
     color: #fff;
     padding: 1.5rem;
     border-radius: 10px;
+    box-shadow: 0px 0px 15px 0px #0A4D68;
 }
 
 /*footer*/
@@ -119,10 +131,11 @@ footer {
 }
 
 .tarjeta-producto {
-    border: 1px solid #F7FAD1;
-    border-radius: 5px;
+    border: 1px solid #FEFAE0;
+    border-radius: 10px;
     padding: 0.5rem 1rem;
-    background-color: #F7FAD1;
+    background-color: #FEFAE0;
+    box-shadow: 0px 0px 15px 0px #AAAAAA;
 }
 
 .menu-title {
@@ -154,15 +167,58 @@ footer {
     color: #fff;
     border-radius: 10px;
     padding: 0.5rem 1rem;
+    box-shadow: 0px 0px 10px 0px #0A4D68;
 }
 
 .menu-boton:hover {
     background-color: #0A4D68;
 }
 
+/*Media Queries*/
+@media screen and (max-width: 576px) {
+    #productos-conteiner {
+        display: flex;
+        flex-direction: column;
+        padding: 0;
+    }
+
+    footer {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(4, 100px);
+        width: 100%;
+    }
+
+    .footer-info {
+        display: flex;
+        flex-direction: row;
+        gap: 1rem;
+    }
+
+    #boton-hamburguesa{
+        border: none;
+        font-size: 35px;
+    }
+   
+}
+
+@media screen and (max-width:768px){
+    #productos-conteiner {
+        display: flex;
+        flex-direction: column;
+        padding: 1.5rem;
+        
+    }
+
+}
+
+
+
+
 /*carrito*/
 #offcanvasRight {
     width: 35%;
+    background-color: #FEFAE0;
 }
 
 .encabezado {
@@ -256,12 +312,16 @@ footer {
     padding-top: 1rem;
 }
 
-#comprar {
+.comprar {
     border: 1px solid #0A4D68;
     border-radius: 10px;
     background-color: #0A4D68;
     color: #fff;
     padding: 0.3rem 1rem;
+}
+
+.comprar:hover {
+    background-color: #3894a3;
 }
 
 .conteiner-cupon {
@@ -270,15 +330,24 @@ footer {
     gap: 0.5rem;
 }
 
-#cupon {
+.cupon {
     border-radius: 5px;
+    border: 1px solid grey;
 }
 
-#aplicar-cupon {
+.cupon:focus {
+    outline: none;
+}
+
+.aplicar-cupon {
     border: none;
     border-radius: 5px;
     background-color: #0A4D68;
     color: #fff;
+}
+
+.aplicar-cupon:hover {
+    background-color: #3894a3;
 }
 
 .title-cupon {
@@ -288,12 +357,22 @@ footer {
 }
 
 /*FORMULARIO*/
+
+input:focus {
+    outline: none;
+}
+
+.conteiner-formulario {
+    background-color: #F7F5EB;
+}
+
 #titulo-datos {
     display: flex;
     justify-content: center;
     padding: 2.5rem 0;
 }
-.titulo-personal{
+
+.titulo-personal {
     font-size: 30px;
     background-color: #0A4D68;
     color: #fff;
@@ -348,7 +427,7 @@ footer {
     padding: 2.5rem 0;
 }
 
-.titulo-pago{
+.titulo-pago {
     font-size: 30px;
     background-color: #0A4D68;
     color: #fff;
@@ -401,13 +480,13 @@ footer {
     display: flex;
 }
 
-.btn-compra{
+.btn-compra {
     display: flex;
     justify-content: center;
     padding: 2rem 0;
 }
 
-.btn-comprar{
+.btn-comprar {
     background-color: #3894a3;
     color: #fff;
     border: none;
@@ -417,20 +496,21 @@ footer {
     font-size: 18px;
 }
 
-.btn-comprar:hover{
+.btn-comprar:hover {
     background-color: #0A4D68;
 }
 
 /*SPINNER*/
 
-.spinner-border{
-   padding: 6rem;
+.spinner-border {
+    padding: 6rem;
 }
 
 /*carrito cantidad*/
-.conteiner-carrito{
+.conteiner-carrito {
     display: flex;
 }
-.carrito-numero{
+
+.carrito-numero {
     color: #0A4D68;
 }
