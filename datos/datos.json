@@ -2,49 +2,96 @@
     {
         "id": 1,
         "img": "menu1.png",
-        "nombre": "Veggie Omelette",
-        "descripcion": "PASTURE-RAISED WHOLE EGGS, SCALLIONS, BELL PEPPER, MOZZARELLA, AND SPINACH, SERVED WITH AVOCADO SMASH, TOASTED SOURDOUGH, ARUGUL",
+        "nombre": "Omelette",
+        "descripcion": "Huevo , cebolla, pimiento, mozzarella y espinaca, servido con puré de aguacate, tostada de masa madre",
         "cantidad": 1,
         "precio": 16
     },
     {
         "id": 2,
         "img": "menu2.png",
-        "nombre": "Avocado Smash",
-        "descripcion": "TOASTED SOURDOUGH, TOPPED WITH AVOCADO, CUCUMBER, RADISH, MICRO CILANTRO, OLIVE OIL DRIZZLE",
+        "nombre": "Toston de palta",
+        "descripcion": "Tostada de masa madre, cubierta con palta, pepino, rábano, cilantro, aceite de oliva",
         "cantidad": 1,
         "precio": 11
     },
     {
         "id": 3,
         "img": "menu3.png",
-        "nombre": "Perfect Egg Sandwich",
-        "descripcion": "ARTISANAL TOASTED BAGEL SCOOPED OUT OR CIABATTA, PASTURE-RAISED SOFT BOILED EGGS, MOZZARELLA, ARUGULA, AVOCADO SMASH, TOMATO, RED PEPPER FLAKES",
+        "nombre": "Sandwich de huevo",
+        "descripcion": "Pan bagel tostado o ciabatta, huevoss, mozzarella, rúcula, palta, tomate, pimiento rojo",
         "cantidad": 1,
         "precio": 14
     },
     {
         "id": 4,
         "img": "menu7.png",
-        "nombre": "The New Yoker",
-        "descripcion": "TOASTED SOURDOUGH, WHIPPED CREAM CHEESE WITH SCALLION AND SPICED ZAATAR, SMOKED SALMON, SLICED TOMATO, PICKLED RED ONION, ALFALFA SPROUTS, LEMON OIL DRIZZLE",
+        "nombre": "Toston de salmón",
+        "descripcion": "Pan tostado de masa madre, queso crema, cebolleta, salmón ahumado, tomate, cebolla roja al escabeche, brotes de alfalfa, aceite de limón",
         "cantidad": 1,
         "precio": 16
     },
     {
         "id": 5,
         "img": "menu5.png",
-        "nombre": "Croissant Sandwitch",
-        "descripcion": "PASTURE-RAISED EGGS & MOZZARELLA OMELETTE SERVED ON PLAIN CROISSANT WITH TOMATO, MIXED GREENS AND SPICY AIOLI SIDEA",
+        "nombre": "Croissant con verduras",
+        "descripcion": "Croissant con omellete, muzarella, tomate, verduras mixtas y aioli picante",
         "cantidad": 1,
         "precio": 15
     },
     {
         "id": 6,
         "img": "menu6.png",
-        "nombre": "Turkey Egg Wrap",
-        "descripcion": "SOFT BOILED PASTURE-RAISED EGGS, TURKEY BACON, SWEET POTATO, AVOCADO, MOZZARELLA, SPINACH, OLIVE OIL, SALSA PICANTE ON THE SIDE",
+        "nombre": "Wrap de pavo y huevo",
+        "descripcion": "Wrap con huevos, tocino de pavo, boniato, palta, mozzarella, espinacas, aceite de oliva, salsa picante al lado",
         "cantidad": 1,
         "precio": 19
+    },
+    {
+        "id": 7,
+        "img": "menu8.png",
+        "nombre": "Tostada de almendras y frutas",
+        "descripcion": "Pan tostado con mantequilla de almendra, frutilla, arándano, kiwi, coco, canela, miel, semilla de chía (sin gluten)",
+        "cantidad": 1,
+        "precio": 13
+    },
+    {
+        "id": 8,
+        "img": "menu9.png",
+        "nombre": "Granola mix",
+        "descripcion": "Avena integral, leche de almendras, coco, dátiles, semilla de chía, semillas de sésamo, canela, frutilla, arándano, kiwi, granola vegana, mantequilla de almendras",
+        "cantidad": 1,
+        "precio": 14
+    },
+    {
+        "id": 9,
+        "img": "menu10.png",
+        "nombre": "Ensalada de frutas",
+        "descripcion": "Yogurt griego cubierto con mango, kiwi, piña, frutilla, arándano, banana, granola vegana y miel",
+        "cantidad": 1,
+        "precio": 13
+    },
+    {
+        "id": 10,
+        "img": "menu12.png",
+        "nombre": "Smoothie naranja",
+        "descripcion": "Mango, banana",
+        "cantidad": 1,
+        "precio": 10
+    },
+    {
+        "id": 11,
+        "img": "menu13.png",
+        "nombre": "Smoothie verde",
+        "descripcion": "Espinaca, manzana, pepino, apio, anana, jengibre, limón",
+        "cantidad": 1,
+        "precio": 12
+    }, {
+        "id": 12,
+        "img": "menu14.png",
+        "nombre": "Smoothie energetico",
+        "descripcion": "Café expreso, banana, almendras, cacao, dátiles, leche de almendra, proteína",
+        "cantidad": 1,
+        "precio": 12
     }
 ]

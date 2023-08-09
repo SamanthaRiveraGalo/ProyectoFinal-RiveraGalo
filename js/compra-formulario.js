@@ -1,4 +1,5 @@
 // VARIABLES
+const tituloCarritoVacio = document.getElementById('titutlo-carrito-vacio')
 const datosPersonales = document.getElementById('datos-personales')
 
 //ARRAY
@@ -9,55 +10,56 @@ compra = []
 const generarFormulario = document.createElement('div')
 generarFormulario.className = 'formulario-datos'
 generarFormulario.innerHTML = `
-<h1 id="titulo-datos"><span class="titulo-personal">Datos Personales </span></h1>
-
-<form id="formulario" action="#">
-  <div class="dato-nombre">
-    <label for="nombre" class="nombre-validacion">Nombre</label>
-    <input id="input-nombre" type="text" pattern="^[A-Za-z]+$" maxlength="35" required>
-  </div>
-  <div class="dato-apellido">
-    <label for="apellido">Apellido</label>
-    <input id="input-apellido" type="text">
-  </div>
-  <div class="dato-email">
-    <label for="email">Email</label>
-    <input id="input-email" type="email">
-  </div>
-  <div class="dato-fecha">
-    <label for="start">DD/MM/AA</label>
-    <input type="date" id="input-fecha">
-  </div>
-</form>
-
-<h2 class="dato-pago"><span class="titulo-pago">Datos de Pago</span></h2>
-
-<form action="#" id="formulario-tarjeta" class="formulario-tarjeta">
-  <div class="numero-tarjeta">
-    <label for="inputNumero">Número Tarjeta</label>
-    <input type="text" id="input-numero-tarjeta">
-  </div>
-  <div class="nombre-tarjeta">
-    <label for="inputNombre">Nombre</label>
-    <input type="text" id="input-nombre-tarjeta">
-  </div>
-  <div class="fecha-tarjeta">
-    <div class="vencimiento"> Vencimiento
-            <div>
-              <input id="tarjeta-vencimiento" type="month" value="2023-08" min="2024-02" max="2030-12">    
+         <h1 id="titulo-datos"><span class="titulo-personal">Datos Personales </span></h1>
+  
+         <form id="formulario" action="#">
+            <div class="dato-nombre">
+              <label for="nombre" class="nombre-validacion">Nombre</label>
+              <input id="input-nombre" type="text">
             </div>
-    </div>
-  </div>
-  <div class="tarjeta-ccv">
-     <label for="inputCCV">CCV</label>
-     <input type="text" id="input-CCV">
-   </div> 
-</form>
-<div class="btn-compra">
-  <button type="submit" id="btn-comprar" class="btn-comprar">Finalizar Comprar</button>
-</div>
-`
+            <div class="dato-apellido">
+              <label for="apellido">Apellido</label>
+              <input id="input-apellido" type="text">
+            </div>
+            <div class="dato-email">
+              <label for="email">Email</label>
+              <input id="input-email" type="email">
+            </div>
+            <div class="dato-fecha">
+              <label for="start">DD/MM/AA</label>
+              <input type="date" id="input-fecha">
+            </div>
+        </form>
+  
+         <h2 class="dato-pago"><span class="titulo-pago">Datos de Pago</span></h2>
+  
+        <form action="#" id="formulario-tarjeta" class="formulario-tarjeta">
+            <div class="numero-tarjeta">
+             <label for="inputNumero">Número Tarjeta</label>
+             <input type="text" id="input-numero-tarjeta">
+            </div>
+            <div class="nombre-tarjeta">
+              <label for="inputNombre">Nombre</label>
+              <input type="text" id="input-nombre-tarjeta">
+            </div>
+            <div class="fecha-tarjeta">
+              <div class="vencimiento"> Vencimiento
+                <div>
+                  <input id="tarjeta-vencimiento" type="month" value="2023-08" min="2024-02" max="2030-12">    
+                </div>
+              </div>
+             </div>
+            <div class="tarjeta-ccv">
+              <label for="inputCCV">CCV</label>
+               <input type="text" id="input-CCV">
+            </div> 
+        </form>
+        <div class="btn-compra">
+          <button type="submit" id="btn-comprar" class="btn-comprar">Finalizar Comprar</button>
+         </div>
+      `
 datosPersonales.append(generarFormulario)
+
 
 //LOCALSTORAGE
 //Si el LocalStorage tiene datos, los agrego al Array compra
@@ -81,7 +83,7 @@ function agregarCompra() {
   const inputNombreTarjeta = document.getElementById('input-nombre-tarjeta').value
   const inputVencimiento = document.getElementById('tarjeta-vencimiento').value
   const inputCcv = document.getElementById('input-CCV').value
-  
+
   const nuevaCompra = new Formulario(inputNombre, inputApellido, inputEmail, inputNacimiento, inputNumeroTarjeta, inputNombreTarjeta, inputVencimiento, inputCcv)
   compra.push(nuevaCompra)
 

@@ -49,7 +49,7 @@ function carritoModal() {
              <span class="sumar-cantidad"> + </span>
            </div>
            <p> Total: $ ${product.cantidad * product.precio} </p>
-           <p class="boton-eliminar"> Eliminar </p>
+           <p class="boton-eliminar"> <i class="fa-solid fa-x"></i> </p>
 
      `
         conteinerCarrito.append(carritoProductos);
@@ -101,7 +101,7 @@ function carritoModal() {
       <p class="title-cupon">El cupon de descuento del 10% es: JAVASCRIPT</p>
     </div>
     <div class="comprar-conteiner"> 
-      <a href="pages/formulario.html"><button id="comprar" class="comprar">Iniciar Compra</button></a>
+      <a><button id="comprar" class="comprar">Iniciar Compra</button></a>
     </div>
     `
     conteinerCarrito.append(totalCarrito);
@@ -124,14 +124,25 @@ function carritoModal() {
 
     let comprar = totalCarrito.querySelector('#comprar')
     comprar.onclick = () => {
-        // que se limpie el carrito entero
-        conteinerCarrito.innerHTML = '';
-        // vaciar el arrey carrito
-        carrito = []
-        // y guardar tamb los cambios en el storage es decir que se reinicie
-        localStorage.removeItem('menu')
-        // que se pinte de nuevo el html
-        carritoModal()
+        if(carrito.length === 0){
+            //sweet alert
+            swal({
+                title: "Carrito Vacio",
+                text: "Necesita agregar productos para poder realizar la compra!",
+              });
+        } else {
+            // que se limpie el carrito entero
+            conteinerCarrito.innerHTML = '';
+            // que se limpie el carrito
+            // y guardar tamb los cambios en el storage
+            localStorage.removeItem('menu')
+            // que se genere de nuevo el html
+            carritoModal()
+            // para que me lleve al formulario
+            setTimeout(()=>{
+                window.location.href = '/pages/formulario.html'
+            },1000);
+        }
     }
 }
 
@@ -139,7 +150,7 @@ function carritoModal() {
 
 const eliminarProductos = (id) => {
     const index = carrito.findIndex((el) => el.id === id);
-    
+
     if (index !== -1) {
         carrito.splice(index, 1);
         localStorage.setItem('menu', JSON.stringify(carrito));
@@ -151,10 +162,10 @@ const eliminarProductos = (id) => {
 // CARRITO NUMERO
 
 const carritoCantidad = () => {
-    numeroCarrito.style.display= "block"
+    numeroCarrito.style.display = "block"
     // lo guardo en el local
     const carritoContador = carrito.length
-    localStorage.setItem ('carritoContador', JSON.stringify(carritoContador))
+    localStorage.setItem('carritoContador', JSON.stringify(carritoContador))
     numeroCarrito.innerText = JSON.parse(localStorage.getItem('carritoContador'))
 }
 carritoCantidad()
