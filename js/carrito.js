@@ -140,7 +140,7 @@ function carritoModal() {
             carritoModal()
             // para que me lleve al formulario
             setTimeout(()=>{
-                window.location.href = '/pages/formulario.html'
+                window.location.href = './pages/formulario.html'
             },1000);
         }
     }
