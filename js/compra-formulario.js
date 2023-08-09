@@ -26,7 +26,7 @@ generarFormulario.innerHTML = `
               <input id="input-email" type="email">
             </div>
             <div class="dato-fecha">
-              <label for="start">DD/MM/AA</label>
+              <label for="start">Fecha de nacimiento</label>
               <input type="date" id="input-fecha">
             </div>
         </form>
