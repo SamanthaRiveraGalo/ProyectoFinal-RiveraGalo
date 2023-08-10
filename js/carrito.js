@@ -85,21 +85,22 @@ function carritoModal() {
     // TOTAL
 
     const total = carrito.reduce((acumulador, el) => acumulador + el.precio * el.cantidad, 0)
-
+    const subTotal = carrito.reduce((acumulador, el) => acumulador + el.precio * el.cantidad, 0)
 
     // FOOTER-CARRITO
 
     const totalCarrito = document.createElement('div')
     totalCarrito.className = ('total-carrito')
     totalCarrito.innerHTML = `
-    <p class = "total-titulo"> Precio Total: $ <span id="precio-Total"> ${total} </span> </p>
+    <p class = "subtotal-titulo"> Sub Total: $ <span> ${subTotal} </span> </p>
     <div class="descuento-conteiner"> 
-      <div class="conteiner-cupon">
-        <input type="text" id="cupon" class="cupon">
-        <button id="aplicar-cupon" class="aplicar-cupon"> Aplicar Descuento </button>
-      </div>
-      <p class="title-cupon">El cupon de descuento del 10% es: JAVASCRIPT</p>
+    <div class="conteiner-cupon">
+    <input type="text" id="cupon" class="cupon">
+    <button id="aplicar-cupon" class="aplicar-cupon"> Aplicar Descuento </button>
     </div>
+    <p class="title-cupon">El cupon de descuento del 10% es: JAVASCRIPT</p>
+    </div>
+    <p class = "total-titulo">Precio Total: $ <span id="precio-Total"> ${total} </span> </p>
     <div class="comprar-conteiner"> 
       <a><button id="comprar" class="comprar">Iniciar Compra</button></a>
     </div>
@@ -120,28 +121,27 @@ function carritoModal() {
         }
     }
 
-    // CLICK EN INICIAR COMPRA
+    // INICIAR COMPRA
 
     let comprar = totalCarrito.querySelector('#comprar')
     comprar.onclick = () => {
-        if(carrito.length === 0){
+        if (carrito.length === 0) {
             //sweet alert
             swal({
                 title: "Carrito Vacio",
                 text: "Necesita agregar productos para poder realizar la compra!",
-              });
+            });
         } else {
-            // que se limpie el carrito entero
+            // que se limpie el html del carrito
             conteinerCarrito.innerHTML = '';
-            // que se limpie el carrito
-            // y guardar tamb los cambios en el storage
+            // se eliminen los items
             localStorage.removeItem('menu')
             // que se genere de nuevo el html
             carritoModal()
             // para que me lleve al formulario
-            setTimeout(()=>{
+            setTimeout(() => {
                 window.location.href = './pages/formulario.html'
-            },1000);
+            }, 1000);
         }
     }
 }

@@ -5,7 +5,8 @@
         "nombre": "Omelette",
         "descripcion": "Huevo , cebolla, pimiento, mozzarella y espinaca, servido con puré de aguacate, tostada de masa madre",
         "cantidad": 1,
-        "precio": 16
+        "precio": 16,
+        "categoria":"desayuno"
     },
     {
         "id": 2,
@@ -13,7 +14,8 @@
         "nombre": "Toston de palta",
         "descripcion": "Tostada de masa madre, cubierta con palta, pepino, rábano, cilantro, aceite de oliva",
         "cantidad": 1,
-        "precio": 11
+        "precio": 11,
+        "categoria":"desayuno"
     },
     {
         "id": 3,
@@ -21,7 +23,8 @@
         "nombre": "Sandwich de huevo",
         "descripcion": "Pan bagel tostado o ciabatta, huevoss, mozzarella, rúcula, palta, tomate, pimiento rojo",
         "cantidad": 1,
-        "precio": 14
+        "precio": 14,
+        "categoria":"sandwitches"
     },
     {
         "id": 4,
@@ -29,7 +32,8 @@
         "nombre": "Toston de salmón",
         "descripcion": "Pan tostado de masa madre, queso crema, cebolleta, salmón ahumado, tomate, cebolla roja al escabeche, brotes de alfalfa, aceite de limón",
         "cantidad": 1,
-        "precio": 16
+        "precio": 16,
+        "categoria":"desayuno"
     },
     {
         "id": 5,
@@ -37,7 +41,8 @@
         "nombre": "Croissant con verduras",
         "descripcion": "Croissant con omellete, muzarella, tomate, verduras mixtas y aioli picante",
         "cantidad": 1,
-        "precio": 15
+        "precio": 15,
+        "categoria":"croissant"
     },
     {
         "id": 6,
@@ -45,7 +50,8 @@
         "nombre": "Wrap de pavo y huevo",
         "descripcion": "Wrap con huevos, tocino de pavo, boniato, palta, mozzarella, espinacas, aceite de oliva, salsa picante al lado",
         "cantidad": 1,
-        "precio": 19
+        "precio": 19,
+        "categoria":"wrap"
     },
     {
         "id": 7,
@@ -53,7 +59,8 @@
         "nombre": "Tostada de almendras y frutas",
         "descripcion": "Pan tostado con mantequilla de almendra, frutilla, arándano, kiwi, coco, canela, miel, semilla de chía (sin gluten)",
         "cantidad": 1,
-        "precio": 13
+        "precio": 13,
+        "categoria":"desayuno"
     },
     {
         "id": 8,
@@ -61,7 +68,8 @@
         "nombre": "Granola mix",
         "descripcion": "Avena integral, leche de almendras, coco, dátiles, semilla de chía, semillas de sésamo, canela, frutilla, arándano, kiwi, granola vegana, mantequilla de almendras",
         "cantidad": 1,
-        "precio": 14
+        "precio": 14,
+        "categoria":"desayuno"
     },
     {
         "id": 9,
@@ -69,7 +77,8 @@
         "nombre": "Ensalada de frutas",
         "descripcion": "Yogurt griego cubierto con mango, kiwi, piña, frutilla, arándano, banana, granola vegana y miel",
         "cantidad": 1,
-        "precio": 13
+        "precio": 13,
+        "categoria":"desayuno"
     },
     {
         "id": 10,
@@ -77,7 +86,8 @@
         "nombre": "Smoothie naranja",
         "descripcion": "Mango, banana",
         "cantidad": 1,
-        "precio": 10
+        "precio": 10,
+        "categoria":"smoothie"
     },
     {
         "id": 11,
@@ -85,13 +95,52 @@
         "nombre": "Smoothie verde",
         "descripcion": "Espinaca, manzana, pepino, apio, anana, jengibre, limón",
         "cantidad": 1,
-        "precio": 12
-    }, {
+        "precio": 12,
+        "categoria":"smoothie"
+    }, 
+    {
         "id": 12,
         "img": "menu14.png",
         "nombre": "Smoothie energetico",
         "descripcion": "Café expreso, banana, almendras, cacao, dátiles, leche de almendra, proteína",
         "cantidad": 1,
-        "precio": 12
+        "precio": 12,
+        "categoria":"smoothie"
+    },
+    {
+        "id": 13,
+        "img": "menu15.png",
+        "nombre": "Wrap de pollo y verduras",
+        "descripcion": "Pollo a la plancha, arroz con cilantro, cebolla, pimiento rojo, mozzarella, aguacate, salsa pura vida",
+        "cantidad": 1,
+        "precio": 17,
+        "categoria":"wrap"
+    },
+    {
+        "id": 14,
+        "img": "menu-16.png",
+        "nombre": "Sandwitch de atun",
+        "descripcion": "Pan ciabatta tostado con atún, aguacate, pepino, rúcula, cebolla al escabeche, zanahoria, cilantro, sésamo, salsa ponzu yuzu, aioli picante",
+        "cantidad": 1,
+        "precio": 22,
+        "categoria":"sandwitches"
+    },
+    {
+        "id": 15,
+        "img": "menu-17.png",
+        "nombre": "Croissant de Almendra",
+        "descripcion": "Croissant de Almendra. Contiene gluten, lácteos, huevos ",
+        "cantidad": 1,
+        "precio": 12,
+        "categoria":"croissant"
+    },
+    {
+        "id": 16,
+        "img": "menu-18.png",
+        "nombre": "Croissant de chocolate y avellanas",
+        "descripcion": "Relleno de chocolate y avellanas. Contiene gluten, lácteos, huevos, frutos secos",
+        "cantidad": 1,
+        "precio": 12,
+        "categoria":"croissant"
     }
 ]

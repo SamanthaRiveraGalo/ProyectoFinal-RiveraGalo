@@ -17,9 +17,10 @@ const baseDeDatos = async () => {
     // settimeout
     const spinner = document.getElementById('spinner')
     spinner.style.display = 'flex'
-    setTimeout(()=>{
+    setTimeout(() => {
 
         for (const product of datosProductos) {
+
             //genero la estructura
             const tarjetas = document.createElement('div')
             tarjetas.className = 'tarjeta-producto'
@@ -29,26 +30,27 @@ const baseDeDatos = async () => {
                      <p class="ingredientes">${product.descripcion}</p>
                      <p class="price">$${product.precio} </p>
                      <button class = "menu-boton"> Agregar al Carrito </button>
+                     <p class="categoria">${product.categoria}</p>
                     `
-    
+
             contenedorTarjetas.appendChild(tarjetas)
-    
+
             // AGREGAR AL CARRITO - FUNCION
-    
+
             function agregarCarrito() {
                 let agregarAlCarrito = tarjetas.querySelector('.menu-boton')
                 agregarAlCarrito.addEventListener('click', () => {
-    
+
                     //toastify
                     Toastify({
                         text: "Se agrego al Carrito!",
                         duration: 1000
                     }).showToast();
-    
+
                     // para que no se repitan los productos en el carrito
-    
+
                     const repetir = carrito.some((repetirProducto) => repetirProducto.id === product.id)
-    
+
                     if (repetir) {
                         carrito.map((prod) => {
                             if (prod.id === product.id) {
@@ -70,6 +72,34 @@ const baseDeDatos = async () => {
             agregarCarrito()
         }
         spinner.style.display = 'none'
-    },1500)
+    }, 1500)
+
+    //filtrado
+    // llamo a todos los botonos
+    const filtroCategoria = document.querySelectorAll('.btn-filtro');
+    filtroCategoria.forEach(button => {
+
+        button.addEventListener('click', () => {
+            //obtengo el atributo de cada categoria
+            const categoria = button.getAttribute('data-category');
+            // llamo la tarjeta
+            const tarjetasProductos = document.querySelectorAll('.tarjeta-producto');
+
+            tarjetasProductos.forEach(productCard => {
+                const productoCategoria = productCard.querySelector('.categoria').textContent;
+                // si es igual a todos o si es igual al atributo data-category del boton que apriete que se muestre
+                if (categoria === 'todos' || productoCategoria === categoria) {
+                    productCard.style.display = 'block';
+                //sino que se oculte
+                } else {
+                    productCard.style.display = 'none';
+                }
+            });
+
+            // cada boton seleccionado quede de un color
+
+        });
+    });
+
 }
 baseDeDatos()
