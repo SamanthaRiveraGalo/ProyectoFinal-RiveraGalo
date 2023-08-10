@@ -113,7 +113,7 @@ function carritoModal() {
 
     btnDescuento.onclick = () => {
         if (inputCupon.value === 'JAVASCRIPT') {
-            const descuento = total * 0.9
+            const descuento = total * 0.1
             const totalConDescuento = total - descuento
             const precioTotalElement = document.getElementById('precio-Total')
             precioTotalElement.textContent = totalConDescuento.toFixed(2)
