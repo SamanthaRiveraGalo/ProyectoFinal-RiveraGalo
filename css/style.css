@@ -600,27 +600,27 @@ input:focus {
 }
 
 /*botones categoria*/
-.categorias{
+.categorias {
     display: flex;
     justify-content: center;
     gap: 1rem;
     padding: 1rem 0;
 }
 
-.categoria{
+.categoria {
     display: none;
 }
 
-.btn-filtro{
+.btn-filtro {
     border: 1px solid #0A4D68;
     color: #000;
     background-color: transparent;
     border-radius: 15px;
-    padding:0.5rem 1rem;
+    padding: 0.5rem 1rem;
     font-size: 18px;
 }
 
-.active{
+.active {
     background-color: #0A4D68;
     color: #fff;
 }

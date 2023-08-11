@@ -74,32 +74,40 @@ const baseDeDatos = async () => {
         spinner.style.display = 'none'
     }, 1500)
 
-    //filtrado
+    //FILTRADO-CATEGORIAS
+
     // llamo a todos los botonos
-    const filtroCategoria = document.querySelectorAll('.btn-filtro');
-    filtroCategoria.forEach(button => {
-
-        button.addEventListener('click', () => {
+    const filtroCategoria = document.querySelectorAll(".btn-filtro");
+    filtroCategoria.forEach((boton) => {
+        boton.addEventListener("click", (e) => {
             //obtengo el atributo de cada categoria
-            const categoria = button.getAttribute('data-category');
+            const categoria = boton.getAttribute("data-category");
             // llamo la tarjeta
-            const tarjetasProductos = document.querySelectorAll('.tarjeta-producto');
-
-            tarjetasProductos.forEach(productCard => {
-                const productoCategoria = productCard.querySelector('.categoria').textContent;
+            const tarjetasProductos = document.querySelectorAll(".tarjeta-producto");
+            //limpio el estilo del boton
+            limpiarEstilos();
+            //agrego el estilo
+            boton.classList.add("active");
+            //seleccion por categoria
+            tarjetasProductos.forEach((productCard) => {
+                const productoCategoria = productCard.querySelector(".categoria").textContent;
                 // si es igual a todos o si es igual al atributo data-category del boton que apriete que se muestre
-                if (categoria === 'todos' || productoCategoria === categoria) {
-                    productCard.style.display = 'block';
+                if (categoria === "todos" || productoCategoria === categoria) {
+                    productCard.style.display = "block";
                 //sino que se oculte
                 } else {
-                    productCard.style.display = 'none';
+                    productCard.style.display = "none";
                 }
             });
-
-            // cada boton seleccionado quede de un color
-
         });
     });
 
-}
+    //limpio los botones
+    const limpiarEstilos = () => {
+        const filtroCategoria = document.querySelectorAll(".btn-filtro");
+        filtroCategoria.forEach((boton) => {
+            boton.classList.remove("active");
+        });
+    }
+};
 baseDeDatos()

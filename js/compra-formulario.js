@@ -15,19 +15,19 @@ generarFormulario.innerHTML = `
          <form id="formulario" action="#">
             <div class="dato-nombre">
               <label for="nombre" class="nombre-validacion">Nombre</label>
-              <input id="input-nombre" type="text">
+              <input id="input-nombre" type="text" class="input">
             </div>
             <div class="dato-apellido">
               <label for="apellido">Apellido</label>
-              <input id="input-apellido" type="text">
+              <input id="input-apellido" type="text" class="input">
             </div>
             <div class="dato-email">
               <label for="email">Email</label>
-              <input id="input-email" type="email">
+              <input id="input-email" type="email" class="input">
             </div>
             <div class="dato-fecha">
               <label for="start">Fecha de nacimiento</label>
-              <input type="date" id="input-fecha">
+              <input type="date" id="input-fecha" class="input">
             </div>
         </form>
   
@@ -36,22 +36,22 @@ generarFormulario.innerHTML = `
         <form action="#" id="formulario-tarjeta" class="formulario-tarjeta">
             <div class="numero-tarjeta">
              <label for="inputNumero">Número Tarjeta</label>
-             <input type="text" id="input-numero-tarjeta">
+             <input type="text" id="input-numero-tarjeta" class="input">
             </div>
             <div class="nombre-tarjeta">
               <label for="inputNombre">Nombre</label>
-              <input type="text" id="input-nombre-tarjeta">
+              <input type="text" id="input-nombre-tarjeta" class="input">
             </div>
             <div class="fecha-tarjeta">
               <div class="vencimiento"> Vencimiento
                 <div>
-                  <input id="tarjeta-vencimiento" type="month" value="2023-08" min="2024-02" max="2030-12">    
+                  <input id="tarjeta-vencimiento" class="input" type="month" value="2023-08" min="2024-02" max="2030-12">    
                 </div>
               </div>
              </div>
             <div class="tarjeta-ccv">
               <label for="inputCCV">CCV</label>
-               <input type="text" id="input-CCV">
+               <input type="text" id="input-CCV" class="input">
             </div> 
         </form>
         <div class="btn-compra">
